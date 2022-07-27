@@ -1,3 +1,11 @@
+/* 13. Write a Program to accept the truth values of variables x and y, and print the truth table of
+the following logical operations:
+a) Conjunction f) Exclusive NOR
+b) Disjunction g) Negation
+c) Exclusive OR h) NAND
+d) Conditional i) NOR
+e) Bi-conditional */
+
 #include <iostream>
 using namespace std;
 

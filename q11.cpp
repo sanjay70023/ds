@@ -1,3 +1,6 @@
+/* 11. Write a Program to calculate Permutation and Combination for an input value n and r using
+recursive formula of nCr and nPr . */
+
 #include<iostream>
 using namespace std;
 

@@ -1,3 +1,6 @@
+/* 20. Given a full m-ary tree with i internal vertices, Write a Program to find the number of leaf
+nodes */
+
 #include<iostream>
 
 using namespace std;

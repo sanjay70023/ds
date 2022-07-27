@@ -1,3 +1,6 @@
+/* 19. Given an adjacency matrix of a graph, write a program to check whether a given set of
+vertices {v1,v2,v3.....,vk} forms an Euler path / Euler Circuit (for circuit assume vk=v1). */
+
 #include<iostream>
 
 using namespace std;

@@ -1,3 +1,7 @@
+/* 8. Write a Program to implement Bubble Sort. Find the number of comparisons during each
+pass and display the intermediate result. Use the observed values to plot a graph to analyse
+the complexity of algorithm. */
+
 #include<iostream>
 #include<stdio.h>
 #include<conio.h>

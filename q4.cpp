@@ -1,3 +1,8 @@
+/* 4. Use the functions defined in Ques 3 to find check whether the given relation is:
+a) Equivalent, or
+b) Partial Order relation, or
+c) None */
+
 #include<iostream>
 #include "RELATIONS.hpp"
 

@@ -1,3 +1,6 @@
+/* 18. Given a graph G, Write a Program to find the number of paths of length n between the
+source and destination entered by the user. */
+
 #include<iostream>
 
 using namespace std;

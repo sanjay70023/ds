@@ -1,3 +1,11 @@
+/* 2. Create a class SET and take two sets as input from user to perform following SET
+Operations:
+a) Subset: Check whether one set is a subset of other or not.
+b) Union and Intersection of two Sets.
+c) Complement: Assume Universal Set as per the input elements from the user.
+d) Set Difference and Symmetric Difference between two SETS
+e) Cartesian Product of Sets */
+
 #include <iostream>
 using namespace std;
 
@@ -5,9 +13,9 @@ class Set
 {
 private:
     int n1;
-    int set1[12];
+    int set1[n1];
     int n2;
-    int set2[10];
+    int set2[n2];
 
 public:
     void getData();        

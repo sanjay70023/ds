@@ -1,7 +1,13 @@
+/* 1. Write a Program to create a SET A and determine the cardinality of SET for an input array of
+elements (repetition allowed) and perform the following operations on the SET:
+a) ismember (a, A): check whether an element belongs to set or not and return value as
+true/false.
+b) powerset(A): list all the elements of power set of A. */
+
 #include <iostream>
 
 using namespace std;
-bool ismember(int arr[],int n,int size)
+bool ismember(int arr[], int n, int size)
 {
     for (int i = 0; i < size; i++) {
         if(arr[i]==n)
@@ -11,7 +17,7 @@ bool ismember(int arr[],int n,int size)
     }
     return false;
 }
-void powerset(int arr[],int size)
+void powerset(int arr[], int size)
 {
     cout<<"\nPowerset of entered set is :\n";
     int n=1<<size;
@@ -31,7 +37,6 @@ void powerset(int arr[],int size)
             }
             j++;
             num=num>>1;
-           
         }
         cout<<"]"<<endl;
     }
