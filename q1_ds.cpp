@@ -1,3 +1,9 @@
+/* 1. Write a Program to create a SET A and determine the cardinality of SET for an input array of
+elements (repetition allowed) and perform the following operations on the SET:
+a) ismember (a, A): check whether an element belongs to set or not and return value as
+true/false.
+b) powerset(A): list all the elements of power set of A. */
+
 #include <iostream>
 #include <math.h>
 #include <iomanip>
