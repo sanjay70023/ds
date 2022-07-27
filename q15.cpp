@@ -2,45 +2,81 @@
 polynomial. (For example store f(x) = 4n3 + 2n + 9 in an array and for a given value
 of n, say n = 5, evaluate (i.e. compute the value of f(5)). */ 
 
-#include <iostream>
-#include <math.h>
+#include<iostream>
+#include<stdio.h>
+#include<conio.h>
+#include<cmath>
+
 using namespace std;
+
+int i;
+
+class FUNCTION
+{
+	private:
+	int n;
+	double *coefficient;
+	double *exponential;
+	
+	public:
+	void input();
+	void display();
+	double evaluate(double);
+};
+
+void FUNCTION::input()
+{
+	int n;
+	cout << "\nEnter the number of terms: ";
+	cin >> this->n;
+	
+	coefficient = new double[n];
+	exponential = new double[n];
+	
+	for(i=0; i<this->n; i++)
+	{
+		cout << "Enter coefficient and exponential of term " << i+1 << ": ";
+		cin >> coefficient[i] >> exponential[i];
+	}
+}
+
+void FUNCTION::display()
+{
+	for(i=0; i<this->n; i++)
+	{
+		if(coefficient[i] >= 0)
+			cout << " + ";
+		else
+			cout << " - ";
+		cout << abs (coefficient[i]);
+		if(exponential[i] != 0)
+			cout << "(x^" << exponential[i] << ")";
+	}
+}
+
+double FUNCTION::evaluate(double x)
+{
+	double result = 0.0;
+	for(i=0; i<this->n; i++)
+	{
+		result += coefficient[i] * (pow(x, exponential[i]));
+	}
+	
+	return result;
+}
+
 int main()
 {
-    int coef[20];
-	int deg;
-	int x;
-	int sum = 1;
-    int ch;
-    do
-    {
-        cout<<endl<<"Enter the degree of the polynomial: ";
-        cin>>deg;
-        for(int i = deg; i >= 0; i--)
-        {
-            cout<<endl<<"Enter the coefficient of degree "<<i<<": ";
-            cin>>coef[i];
-        }
-        cout<<endl<<"The required polynomial is:  f(x) = ";
-        cout<<coef[deg]<<"x^"<<deg;
-        for(int i = deg-1; i > 0; i--)
-        {
-            if(coef[i]>0)
-                cout<<"+"<<coef[i]<<"x^"<<i;
-            else
-                cout<<coef[i]<<"x^"<<i;
-        }
-        cout<<"+"<<coef[0]<<"x^"<<0;
-        cout<<endl<<"Enter the value of x : ";
-        cin>>x;
-        for(int i = deg; i >= 0; i--)
-        {
-            sum+=(coef[i]*pow(x,i));
-        }
-        cout<<endl<<"The solution of this polynomial for x = "<<x<<" is: f("<<x<<") = "<<sum;
-		cout<<endl<<"Press 1 to continue or 0 to quit ";
-			cin>>ch;
-	}
-	while(ch == 1);
+	double x;
+	
+	FUNCTION ob;
+	
+	ob.input();	
+	cout << "Function is f(x) = ";
+	ob.display();
+	cout << "\nEnter the value of x: ";
+	cin >> x;
+	cout << "\nValue of f(" << x << "): " << ob.evaluate(x) << endl;
+	
 	return 0;
 }
